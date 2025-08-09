@@ -6,7 +6,7 @@
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=avanishkasar&theme=radical" alt="avanishkasar" /></a> </p>
 
 - 🔭 I’m currently working on [ARchitect-Website](https://github.com/avanishkasar/ARchitect-Website)
-- 🌱 I’m currently learning **AI Integration and Workflows**
+- 🌱 I’m currently learning **AI-ML Integration and Workflows**
 
 - 📫 How to reach me **avanishkasar57@gmail.com**
 - 👨‍💻 All of my projects are available at **https://linktr.ee/Avanish_Kasar**
