@@ -15,6 +15,40 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// ===================================
+// Cursor Glow Effect
+// ===================================
+const cursorGlow = document.getElementById('cursorGlow');
+let mouseX = 0;
+let mouseY = 0;
+let cursorX = 0;
+let cursorY = 0;
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursorGlow.classList.add('active');
+});
+
+document.addEventListener('mouseleave', () => {
+    cursorGlow.classList.remove('active');
+});
+
+// Smooth cursor follow
+function animateCursor() {
+    const dx = mouseX - cursorX;
+    const dy = mouseY - cursorY;
+    
+    cursorX += dx * 0.1;
+    cursorY += dy * 0.1;
+    
+    cursorGlow.style.left = cursorX + 'px';
+    cursorGlow.style.top = cursorY + 'px';
+    
+    requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
 // Mobile menu toggle
 menuToggle?.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
@@ -66,17 +100,31 @@ const observerOptions = {
 };
 
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in-up');
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }, index * 100);
             observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Observe elements
-const animatedElements = document.querySelectorAll('.project-card, .timeline-item, .contact-method');
-animatedElements.forEach(el => observer.observe(el));
+// Observe elements with initial hidden state
+const animatedElements = document.querySelectorAll('.project-card, .timeline-item, .contact-method, .skill-tag');
+animatedElements.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    observer.observe(el);
+});
+
+// Stagger animation for skills
+const skillTags = document.querySelectorAll('.skill-tag');
+skillTags.forEach((tag, index) => {
+    tag.style.transitionDelay = `${index * 0.05}s`;
+});
 
 // ===================================
 // Profile Card Interactive Glow
@@ -90,10 +138,44 @@ if (profileCard) {
         
         const glow = profileCard.querySelector('.card-glow');
         if (glow) {
-            glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 240, 255, 0.3) 0%, transparent 50%)`;
+            glow.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(0, 240, 255, 0.4) 0%, transparent 50%)`;
+        }
+        
+        // 3D tilt effect
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / 20;
+        const rotateY = (centerX - x) / 20;
+        
+        profileCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    });
+    
+    profileCard.addEventListener('mouseleave', () => {
+        profileCard.style.transform = '';
+        const glow = profileCard.querySelector('.card-glow');
+        if (glow) {
+            glow.style.background = '';
         }
     });
 }
+
+// ===================================
+// Magnetic Button Effect
+// ===================================
+const buttons = document.querySelectorAll('.btn');
+buttons.forEach(button => {
+    button.addEventListener('mousemove', (e) => {
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        
+        button.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+    });
+    
+    button.addEventListener('mouseleave', () => {
+        button.style.transform = '';
+    });
+});
 
 // ===================================
 // Project Cards Tilt Effect
@@ -185,11 +267,80 @@ Reach out: avanishkasar57@gmail.com
 `, 'color: #00f0ff; font-weight: bold;', 'color: #a1a1aa; font-size: 14px;');
 
 // ===================================
-// Service Worker Registration (Optional)
+// Page Load Animation
 // ===================================
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        // Uncomment when you have a service worker
-        // navigator.serviceWorker.register('/sw.js');
+window.addEventListener('load', () => {
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease';
+    
+    setTimeout(() => {
+        document.body.style.opacity = '1';
+    }, 100);
+    
+    // Preload images
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        if (img.complete) {
+            img.style.opacity = '1';
+        } else {
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.5s ease';
+            img.addEventListener('load', () => {
+                img.style.opacity = '1';
+            });
+        }
     });
-}
+});
+
+// ===================================
+// Smooth Scroll to Top
+// ===================================
+let scrollTopBtn = document.createElement('button');
+scrollTopBtn.innerHTML = '↑';
+scrollTopBtn.className = 'scroll-top-btn';
+scrollTopBtn.style.cssText = `
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: var(--accent);
+    color: var(--bg-primary);
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0, 240, 255, 0.3);
+`;
+document.body.appendChild(scrollTopBtn);
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        scrollTopBtn.style.opacity = '1';
+        scrollTopBtn.style.transform = 'translateY(0)';
+    } else {
+        scrollTopBtn.style.opacity = '0';
+        scrollTopBtn.style.transform = 'translateY(20px)';
+    }
+});
+
+scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+scrollTopBtn.addEventListener('mouseenter', () => {
+    scrollTopBtn.style.transform = 'translateY(-5px) scale(1.1)';
+    scrollTopBtn.style.boxShadow = '0 8px 30px rgba(0, 240, 255, 0.5)';
+});
+
+scrollTopBtn.addEventListener('mouseleave', () => {
+    scrollTopBtn.style.transform = 'translateY(0) scale(1)';
+    scrollTopBtn.style.boxShadow = '0 4px 20px rgba(0, 240, 255, 0.3)';
+});
