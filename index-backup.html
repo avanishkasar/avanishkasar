@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Avanish Kasar - Software Developer | AI & Full-Stack Engineer. Building real-world, AI-driven products with a focus on usability, scalability, and impact.">
+  <meta name="keywords" content="Avanish Kasar, Software Developer, Full Stack Developer, AI Engineer, Web Developer, Portfolio">
+  <meta name="author" content="Avanish Kasar">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Avanish Kasar | Software Developer">
+  <meta property="og:description" content="Software Developer building AI-driven products with impact.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://avanish.tech">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Avanish Kasar | Software Developer">
+  <meta name="twitter:description" content="Software Developer building AI-driven products with impact.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://avanish.tech">
+  
+  <title>Avanish Kasar | Software Developer</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Animated Background -->
+  <a-waves class="background-animation">
+    <svg class="js-svg"></svg>
+  </a-waves>
+
+  <!-- Cursor Glow Effect -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__logo-text">AK</span>
+      <span class="nav__logo-dot"></span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#about" class="nav__link" data-text="About">About</a></li>
+      <li><a href="#projects" class="nav__link" data-text="Projects">Projects</a></li>
+      <li><a href="#community" class="nav__link" data-text="Community">Community</a></li>
+      <li><a href="#contact" class="nav__link" data-text="Contact">Contact</a></li>
+    </ul>
+    <button class="nav__menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="#about" class="mobile-menu__link">About</a></li>
+      <li><a href="#projects" class="mobile-menu__link">Projects</a></li>
+      <li><a href="#community" class="mobile-menu__link">Community</a></li>
+      <li><a href="#contact" class="mobile-menu__link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main class="main">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <div class="hero__badge">
+          <span class="hero__badge-dot"></span>
+          <span class="hero__badge-text">Available for opportunities</span>
+        </div>
+        
+        <h1 class="hero__title">
+          <span class="hero__title-line">
+            <span class="hero__title-word" data-delay="0">Avanish</span>
+          </span>
+          <span class="hero__title-line">
+            <span class="hero__title-word" data-delay="1">Kasar</span>
+          </span>
+        </h1>
+        
+        <div class="hero__role">
+          <span class="hero__role-text">Software Developer</span>
+          <span class="hero__role-divider">|</span>
+          <span class="hero__role-text">AI & Full-Stack Engineer</span>
+        </div>
+        
+        <p class="hero__description">
+          Building real-world, AI-driven products with a strong focus on 
+          <span class="highlight">usability</span>, 
+          <span class="highlight">scalability</span>, and 
+          <span class="highlight">impact</span>.
+        </p>
+        
+        <div class="hero__cta">
+          <a href="#projects" class="btn btn--primary">
+            <span class="btn__text">View Projects</span>
+            <span class="btn__icon">→</span>
+          </a>
+          <a href="#contact" class="btn btn--secondary">
+            <span class="btn__text">Get in Touch</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero__scroll-indicator">
+        <span class="hero__scroll-text">Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+      <div class="section__header">
+        <span class="section__number">01</span>
+        <h2 class="section__title">About</h2>
+        <div class="section__line"></div>
+      </div>
+      
+      <div class="about__content">
+        <div class="about__text">
+          <p class="about__intro">
+            I'm a <span class="highlight">Computer Engineering undergraduate</span> building real-world, 
+            AI-driven products with a strong focus on usability, scalability, and impact.
+          </p>
+          <p class="about__body">
+            I've built and shipped <span class="highlight">Playlistify AI</span>, a conversational music agent 
+            integrating Spotify, Gemini, and agentic memory systems. Alongside development, I lead technical 
+            communities and hackathon initiatives as the <span class="highlight">Lead Organizer at GDG On Campus APSIT</span>.
+          </p>
+        </div>
+        
+        <div class="about__skills">
+          <h3 class="about__skills-title">Tech Stack</h3>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h4 class="skill-category__title">Languages</h4>
+              <div class="skill-category__items">
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4 class="skill-category__title">Frontend</h4>
+              <div class="skill-category__items">
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Tailwind CSS</span>
+                <span class="skill-tag">HTML/CSS</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4 class="skill-category__title">Backend</h4>
+              <div class="skill-category__items">
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">REST APIs</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4 class="skill-category__title">AI & Cloud</h4>
+              <div class="skill-category__items">
+                <span class="skill-tag">Google Gemini API</span>
+                <span class="skill-tag">Firebase</span>
+                <span class="skill-tag">Spotify API</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4 class="skill-category__title">Tools</h4>
+              <div class="skill-category__items">
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">VS Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+      <div class="section__header">
+        <span class="section__number">02</span>
+        <h2 class="section__title">Projects</h2>
+        <div class="section__line"></div>
+      </div>
+      
+      <div class="projects__grid">
+        <!-- Featured Project -->
+        <article class="project-card project-card--featured" data-tilt>
+          <div class="project-card__glow"></div>
+          <div class="project-card__content">
+            <div class="project-card__header">
+              <span class="project-card__label">Featured Project</span>
+              <div class="project-card__links">
+                <a href="https://github.com/avanishkasar/Playlistify-AI" target="_blank" rel="noopener" class="project-card__link" aria-label="View on GitHub">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                </a>
+                <a href="https://playlistify.avanish.tech" target="_blank" rel="noopener" class="project-card__link" aria-label="View live site">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Playlistify AI</h3>
+            <p class="project-card__description">
+              A conversational AI music agent that transforms natural language moods into personalized Spotify playlists. 
+              Understands real-time intent, supports multilingual input (English, Hindi, Tamil, Telugu), learns user 
+              preferences through agentic memory, and creates playlists directly in the user's Spotify account.
+            </p>
+            <div class="project-card__tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">Gemini API</span>
+              <span class="tech-tag">Spotify API</span>
+              <span class="tech-tag">OAuth 2.0</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" data-tilt>
+          <div class="project-card__glow"></div>
+          <div class="project-card__content">
+            <div class="project-card__header">
+              <span class="project-card__label">Automation Tool</span>
+              <div class="project-card__links">
+                <a href="https://apify.com/avanishkasar/playlistify-ai-pro" target="_blank" rel="noopener" class="project-card__link" aria-label="View on Apify">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-card__title">Playlistify AI Pro</h3>
+            <p class="project-card__description">
+              A production-ready AI automation version of Playlistify built for developers and power users using MCP tools. 
+              Enables playlist creation, recommendations, and automation workflows via Apify.
+            </p>
+            <div class="project-card__tech">
+              <span class="tech-tag">Apify</span>
+              <span class="tech-tag">MCP</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">AI Automation</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card" data-tilt>
+          <div class="project-card__glow"></div>
+          <div class="project-card__content">
+            <div class="project-card__header">
+              <span class="project-card__label">Community Initiative</span>
+            </div>
+            <h3 class="project-card__title">TechSprint / HackWins</h3>
+            <p class="project-card__description">
+              Led and organized large-scale hackathons and tech sprints with 200+ participants, handling planning, 
+              platform setup, mentor coordination, and execution using Google technologies and modern dev tooling.
+            </p>
+            <div class="project-card__tech">
+              <span class="tech-tag">Event Management</span>
+              <span class="tech-tag">Google Tech</span>
+              <span class="tech-tag">Community</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Community Section -->
+    <section class="section community" id="community">
+      <div class="section__header">
+        <span class="section__number">03</span>
+        <h2 class="section__title">Community</h2>
+        <div class="section__line"></div>
+      </div>
+      
+      <div class="community__content">
+        <div class="community__role">
+          <div class="community__role-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <div class="community__role-info">
+            <h3 class="community__role-title">Lead Organizer</h3>
+            <span class="community__role-org">GDG On Campus APSIT</span>
+          </div>
+        </div>
+        
+        <div class="community__highlights">
+          <div class="highlight-card">
+            <span class="highlight-card__number">200+</span>
+            <span class="highlight-card__label">Hackathon Participants</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-card__number">10+</span>
+            <span class="highlight-card__label">Technical Workshops</span>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-card__number">∞</span>
+            <span class="highlight-card__label">Community Impact</span>
+          </div>
+        </div>
+        
+        <ul class="community__activities">
+          <li class="community__activity">
+            <span class="community__activity-icon">→</span>
+            <span>Organizer & mentor for hackathons, study jams, and technical workshops</span>
+          </li>
+          <li class="community__activity">
+            <span class="community__activity-icon">→</span>
+            <span>Active contributor to student developer communities and peer mentoring</span>
+          </li>
+          <li class="community__activity">
+            <span class="community__activity-icon">→</span>
+            <span>Building bridges between students and industry through technical events</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+      <div class="section__header">
+        <span class="section__number">04</span>
+        <h2 class="section__title">Contact</h2>
+        <div class="section__line"></div>
+      </div>
+      
+      <div class="contact__content">
+        <p class="contact__intro">
+          Interested in working together or just want to say hi? 
+          <span class="highlight">Let's connect.</span>
+        </p>
+        
+        <a href="mailto:avanishkasar.cloud@gmail.com" class="contact__email">
+          <span class="contact__email-text">avanishkasar.cloud@gmail.com</span>
+          <span class="contact__email-arrow">→</span>
+        </a>
+        
+        <div class="contact__socials">
+          <a href="https://github.com/avanishkasar" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/avanish-kasar" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://codepen.io/avanishkasar" target="_blank" rel="noopener" class="social-link" aria-label="CodePen">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+              <line x1="12" y1="22" x2="12" y2="15.5"></line>
+              <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+              <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+              <line x1="12" y1="2" x2="12" y2="8.5"></line>
+            </svg>
+            <span>CodePen</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__content">
+      <span class="footer__text">Designed & Built by Avanish Kasar</span>
+      <span class="footer__divider">|</span>
+      <span class="footer__domain">avanish.tech</span>
+      <span class="footer__year">© 2026 All rights reserved.</span>
+    </div>
+    <div class="footer__links">
+      <a href="#" class="footer__link">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/noise.js"></script>
+  <script src="js/waves.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
