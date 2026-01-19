@@ -15,10 +15,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ===================================
-// Mobile Menu
-// ===================================
-
 // Mobile menu toggle
 menuToggle?.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
@@ -73,6 +69,7 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
             setTimeout(() => {
+                entry.target.classList.add('visible');
                 entry.target.style.opacity = '1';
                 entry.target.style.transform = 'translateY(0)';
             }, index * 100);
@@ -82,7 +79,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements with initial hidden state
-const animatedElements = document.querySelectorAll('.project-card, .timeline-item, .contact-method, .skill-tag');
+const animatedElements = document.querySelectorAll('.project-card, .timeline-item, .contact-method, .skill-tag, .section-title, .about-grid, .footer-content');
 animatedElements.forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
@@ -94,6 +91,18 @@ animatedElements.forEach(el => {
 const skillTags = document.querySelectorAll('.skill-tag');
 skillTags.forEach((tag, index) => {
     tag.style.transitionDelay = `${index * 0.05}s`;
+});
+
+// Stagger animation for timeline items
+const timelineItems = document.querySelectorAll('.timeline-item');
+timelineItems.forEach((item, index) => {
+    item.style.transitionDelay = `${index * 0.15}s`;
+});
+
+// Stagger animation for project cards
+const projectCards = document.querySelectorAll('.project-card');
+projectCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 0.2}s`;
 });
 
 // ===================================
@@ -276,8 +285,8 @@ scrollTopBtn.style.cssText = `
     height: 50px;
     border-radius: 12px;
     background: rgba(0, 240, 255, 0.9);
-    color: var(--bg-primary);
-    border: 1px solid rgba(0, 240, 255, 0.3);
+    color: #0a0a0f;
+    border: none;
     font-size: 1.5rem;
     cursor: pointer;
     opacity: 0;
