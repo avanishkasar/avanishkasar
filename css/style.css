@@ -616,10 +616,35 @@ body::before {
 }
 
 /* ===================================
+   Section Title Styles
+   =================================== */
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent) 0%, var(--gradient-end) 100%);
+    border-radius: 2px;
+}
+
+/* ===================================
    About Section
    =================================== */
 .about {
     background: var(--bg-secondary);
+    padding: var(--spacing-xl) 0;
 }
 
 .about-content {
@@ -673,13 +698,6 @@ body::before {
 
 .profile-image-wrapper:hover .profile-glow {
     opacity: 1;
-}
-
-/* ===================================
-   About Section
-   =================================== */
-.about {
-    background: var(--bg-secondary);
 }
 
 .about-text p {
@@ -750,6 +768,7 @@ body::before {
    =================================== */
 .experience {
     background: var(--bg-primary);
+    padding: var(--spacing-xl) 0;
 }
 
 .timeline {
@@ -864,6 +883,7 @@ body::before {
    =================================== */
 .projects {
     background: var(--bg-secondary);
+    padding: var(--spacing-xl) 0;
 }
 
 .projects-grid {
