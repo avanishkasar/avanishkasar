@@ -328,27 +328,6 @@ body::before {
     margin-top: 2rem;
 }
 
-.hero-greeting {
-    font-size: 1.1rem;
-    color: var(--accent);
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.hero-name {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    position: relative;
-    animation: heroTitleReveal 1s ease-out;
-}
-
 .hero-name::after {
     content: attr(data-text);
     position: absolute;
@@ -703,11 +682,6 @@ body::before {
     background: var(--bg-secondary);
 }
 
-.about-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
 .about-text p {
     font-size: 1.125rem;
     line-height: 1.8;
@@ -748,7 +722,11 @@ body::before {
 }
 
 .skill-tag:hover {
- 
+    background: rgba(0, 240, 255, 0.2);
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 20px var(--accent-glow);
+}
 
 @media (max-width: 768px) {
     .about-content {
@@ -765,10 +743,6 @@ body::before {
     .about-text {
         text-align: center;
     }
-}   background: rgba(0, 240, 255, 0.2);
-    border-color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: 0 4px 20px var(--accent-glow);
 }
 
 /* ===================================
