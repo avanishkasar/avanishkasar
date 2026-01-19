@@ -26,29 +26,7 @@
     height: 100%;
 }
 
-.cursor-glow {
-    position: fixed;
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    transition: opacity 0.3s ease;
-    opacity: 0;
-    mix-blend-mode: screen;
-}
-
-.cursor-glow.active {
-    opacity: 1;
-}
-
 @media (max-width: 768px) {
-    .cursor-glow {
-        display: none;
-    }
-    
     .background-animation {
         opacity: 0.5;
     }
@@ -715,7 +693,7 @@ body::before {
 }
 
 .profile-image-wrapper:hover .profile-glow {
-    opacity: 1p: text;
+    opacity: 1;
 }
 
 /* ===================================

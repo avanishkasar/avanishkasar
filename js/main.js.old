@@ -16,6 +16,40 @@ window.addEventListener('scroll', () => {
 });
 
 // ===================================
+// Cursor Glow Effect
+// ===================================
+const cursorGlow = document.getElementById('cursorGlow');
+let mouseX = 0;
+let mouseY = 0;
+let cursorX = 0;
+let cursorY = 0;
+
+document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    cursorGlow.classList.add('active');
+});
+
+document.addEventListener('mouseleave', () => {
+    cursorGlow.classList.remove('active');
+});
+
+// Smooth cursor follow
+function animateCursor() {
+    const dx = mouseX - cursorX;
+    const dy = mouseY - cursorY;
+    
+    cursorX += dx * 0.1;
+    cursorY += dy * 0.1;
+    
+    cursorGlow.style.left = cursorX + 'px';
+    cursorGlow.style.top = cursorY + 'px';
+    
+    requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// ===================================
 // Mobile Menu
 // ===================================
 
