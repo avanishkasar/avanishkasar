@@ -305,16 +305,16 @@ scrollTopBtn.style.cssText = `
     width: 50px;
     height: 50px;
     border-radius: 12px;
-    background: var(--accent);
+    background: rgba(0, 240, 255, 0.9);
     color: var(--bg-primary);
-    border: none;
+    border: 1px solid rgba(0, 240, 255, 0.3);
     font-size: 1.5rem;
     cursor: pointer;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.3s ease;
     z-index: 999;
-    box-shadow: 0 4px 20px rgba(0, 240, 255, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 `;
 document.body.appendChild(scrollTopBtn);
 
@@ -336,11 +336,11 @@ scrollTopBtn.addEventListener('click', () => {
 });
 
 scrollTopBtn.addEventListener('mouseenter', () => {
-    scrollTopBtn.style.transform = 'translateY(-5px) scale(1.1)';
-    scrollTopBtn.style.boxShadow = '0 8px 30px rgba(0, 240, 255, 0.5)';
+    scrollTopBtn.style.transform = 'translateY(-3px) scale(1.05)';
+    scrollTopBtn.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.4)';
 });
 
 scrollTopBtn.addEventListener('mouseleave', () => {
     scrollTopBtn.style.transform = 'translateY(0) scale(1)';
-    scrollTopBtn.style.boxShadow = '0 4px 20px rgba(0, 240, 255, 0.3)';
+    scrollTopBtn.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.3)';
 });
