@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avanish Kasar - Software Developer & AI Engineer</title>
+    <title>Avanish Kasar — Software Developer & AI Engineer</title>
     
     <!-- Meta Tags -->
     <meta name="description" content="CS Undergrad | GDG Organizer @ APSIT | GSSoC 2025 | Building at the intersection of AI and cloud technology">
@@ -11,107 +11,171 @@
     <meta name="author" content="Avanish Kasar">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Avanish Kasar - Software Developer & AI Engineer">
+    <meta property="og:title" content="Avanish Kasar — Software Developer & AI Engineer">
     <meta property="og:description" content="CS Undergrad building innovative AI-powered applications">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://avanish.tech">
-    <meta property="og:image" content="https://avanish.tech/assets/profile.jpg">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Avanish Kasar - Software Developer & AI Engineer">
+    <meta name="twitter:title" content="Avanish Kasar — Software Developer & AI Engineer">
     <meta name="twitter:description" content="CS Undergrad building innovative AI-powered applications">
-    <meta name="twitter:image" content="https://avanish.tech/assets/profile.jpg">
     
     <!-- Canonical -->
     <link rel="canonical" href="https://avanish.tech">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300f0ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230080ff;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0f'/%3E%3Ctext x='50' y='70' font-family='Arial, sans-serif' font-size='60' font-weight='bold' text-anchor='middle' fill='url(%23grad)'%3EAK%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2300f0ff;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%237B61FF;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='20' fill='%230c0c0c'/%3E%3Ctext x='50' y='70' font-family='Arial, sans-serif' font-size='60' font-weight='bold' text-anchor='middle' fill='url(%23grad)'%3EAK%3C/text%3E%3C/svg%3E">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <a href="#home" class="logo">
-                    <span class="logo-text">avanish</span><span class="logo-dot">.</span><span class="logo-tech">tech</span>
-                </a>
-                
-                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="#home" class="nav-link"><span>H</span><span>O</span><span>M</span><span>E</span></a></li>
-                    <li><a href="#about" class="nav-link"><span>A</span><span>B</span><span>O</span><span>U</span><span>T</span></a></li>
-                    <li><a href="#experience" class="nav-link"><span>E</span><span>X</span><span>P</span><span>E</span><span>R</span><span>I</span><span>E</span><span>N</span><span>C</span><span>E</span></a></li>
-                    <li><a href="#projects" class="nav-link"><span>P</span><span>R</span><span>O</span><span>J</span><span>E</span><span>C</span><span>T</span><span>S</span></a></li>
-                    <li><a href="#contact" class="nav-link contact-btn"><span>C</span><span>O</span><span>N</span><span>T</span><span>A</span><span>C</span><span>T</span></a></li>
-                </ul>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-text">
+                <span class="preloader-letter">A</span>
+                <span class="preloader-letter">V</span>
+                <span class="preloader-letter">A</span>
+                <span class="preloader-letter">N</span>
+                <span class="preloader-letter">I</span>
+                <span class="preloader-letter">S</span>
+                <span class="preloader-letter">H</span>
             </div>
+            <div class="preloader-line"></div>
+            <div class="preloader-counter" id="preloaderCounter">0</div>
+        </div>
+    </div>
+
+    <!-- Noise Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo" data-magnetic>
+                <span>AK</span>
+            </a>
+            
+            <div class="nav-links">
+                <a href="#about" class="nav-link" data-magnetic><span>About</span></a>
+                <a href="#experience" class="nav-link" data-magnetic><span>Experience</span></a>
+                <a href="#projects" class="nav-link" data-magnetic><span>Work</span></a>
+                <a href="#contact" class="nav-link nav-link--cta" data-magnetic><span>Let's Talk</span></a>
+            </div>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-menu-links">
+                <a href="#home" class="mobile-link"><span>Home</span></a>
+                <a href="#about" class="mobile-link"><span>About</span></a>
+                <a href="#experience" class="mobile-link"><span>Experience</span></a>
+                <a href="#projects" class="mobile-link"><span>Work</span></a>
+                <a href="#contact" class="mobile-link"><span>Contact</span></a>
+            </div>
+            <div class="mobile-menu-footer">
+                <a href="https://github.com/avanishkasar" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://www.linkedin.com/in/avanishkasar/" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://x.com/only_avanish" target="_blank" rel="noopener">Twitter</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <p class="hero-greeting">Hi, I'm</p>
-                    <h1 class="hero-name">Avanish Kasar<span class="text-gradient">.</span></h1>
-                    <h2 class="hero-title">CS Undergrad | GDG Organizer @ APSIT</h2>
-                    <p class="hero-description">
-                        A proactive Computer Science student building at the intersection of 
-                        <span class="highlight">AI</span> and <span class="highlight">cloud technology</span>. 
-                        GSSoC 2025 Contributor | Future Tech Innovator
-                    </p>
-                    
-                    <div class="hero-cta">
-                        <a href="#projects" class="btn btn-primary">View Projects</a>
-                        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                    </div>
-                    
-                    <div class="hero-social">
-                        <a href="https://github.com/avanishkasar" target="_blank" rel="noopener" aria-label="GitHub">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        </a>
-                        <a href="https://www.linkedin.com/in/avanishkasar/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        </a>
-                        <a href="https://x.com/only_avanish" target="_blank" rel="noopener" aria-label="Twitter">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        </a>
-                        <a href="https://devfolio.co/@avanishkasar" target="_blank" rel="noopener" aria-label="Devfolio">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.86-.93-6-4.46-6-8v-6.5l6-3 6 3V12c0 3.54-2.14 7.07-6 8z"/></svg>
-                        </a>
-                    </div>
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span class="hero-tag-line"></span>
+                <span class="hero-tag-text reveal-text">Software Developer & AI Engineer</span>
+            </div>
+
+            <h1 class="hero-title">
+                <div class="hero-title-line">
+                    <span class="reveal-text">AVANISH</span>
+                </div>
+                <div class="hero-title-line hero-title-line--indent">
+                    <span class="reveal-text">KASAR<span class="hero-dot">.</span></span>
+                </div>
+            </h1>
+
+            <div class="hero-bottom">
+                <div class="hero-description">
+                    <p class="reveal-text">Building at the intersection of AI and cloud technology. CS Undergrad, GDG Organizer, and open-source enthusiast turning ideas into impactful code.</p>
                 </div>
                 
-                <div class="hero-badges">
-                    <div class="floating-badge badge-1">
-                        <span class="badge-icon">🚀</span>
-                        <span>GDG Organizer</span>
-                    </div>
-                    <div class="floating-badge badge-2">
-                        <span class="badge-icon">☁️</span>
-                        <span>Cloud Explorer</span>
-                    </div>
-                    <div class="floating-badge badge-3">
-                        <span class="badge-icon">🎯</span>
-                        <span>GSSoC 2025</span>
-                    </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/avanishkasar" target="_blank" rel="noopener" class="hero-social-link reveal-text" data-magnetic>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <span>GH</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/avanishkasar/" target="_blank" rel="noopener" class="hero-social-link reveal-text" data-magnetic>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        <span>LI</span>
+                    </a>
+                    <a href="https://x.com/only_avanish" target="_blank" rel="noopener" class="hero-social-link reveal-text" data-magnetic>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        <span>X</span>
+                    </a>
+                    <a href="https://devfolio.co/@avanishkasar" target="_blank" rel="noopener" class="hero-social-link reveal-text" data-magnetic>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.86-.93-6-4.46-6-8v-6.5l6-3 6 3V12c0 3.54-2.14 7.07-6 8z"/></svg>
+                        <span>DF</span>
+                    </a>
                 </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <span>Scroll to explore</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-inner">
+                <span>PYTHON</span><span class="marquee-dot">&bull;</span>
+                <span>REACT</span><span class="marquee-dot">&bull;</span>
+                <span>NODE.JS</span><span class="marquee-dot">&bull;</span>
+                <span>TYPESCRIPT</span><span class="marquee-dot">&bull;</span>
+                <span>KOTLIN</span><span class="marquee-dot">&bull;</span>
+                <span>GOOGLE CLOUD</span><span class="marquee-dot">&bull;</span>
+                <span>FIREBASE</span><span class="marquee-dot">&bull;</span>
+                <span>GEMINI AI</span><span class="marquee-dot">&bull;</span>
+                <span>JAVA</span><span class="marquee-dot">&bull;</span>
+                <span>C++</span><span class="marquee-dot">&bull;</span>
+                <span>ARCORE</span><span class="marquee-dot">&bull;</span>
+                <span>GIT</span><span class="marquee-dot">&bull;</span>
+                <span>PYTHON</span><span class="marquee-dot">&bull;</span>
+                <span>REACT</span><span class="marquee-dot">&bull;</span>
+                <span>NODE.JS</span><span class="marquee-dot">&bull;</span>
+                <span>TYPESCRIPT</span><span class="marquee-dot">&bull;</span>
+                <span>KOTLIN</span><span class="marquee-dot">&bull;</span>
+                <span>GOOGLE CLOUD</span><span class="marquee-dot">&bull;</span>
+                <span>FIREBASE</span><span class="marquee-dot">&bull;</span>
+                <span>GEMINI AI</span><span class="marquee-dot">&bull;</span>
+                <span>JAVA</span><span class="marquee-dot">&bull;</span>
+                <span>C++</span><span class="marquee-dot">&bull;</span>
+                <span>ARCORE</span><span class="marquee-dot">&bull;</span>
+                <span>GIT</span><span class="marquee-dot">&bull;</span>
             </div>
         </div>
     </section>
@@ -119,35 +183,49 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-image-large">
-                    <img src="assets/Monochrome Simple Memories Photo Collage.png" alt="Avanish Kasar" class="about-hero-img">
-                    <div class="image-overlay"></div>
+            <div class="section-label reveal-text">
+                <span class="section-number">01</span>
+                <span class="section-label-text">ABOUT</span>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-left">
+                    <h2 class="about-heading">
+                        <div class="reveal-wrap"><span class="reveal-text">I'm a Computer Science</span></div>
+                        <div class="reveal-wrap"><span class="reveal-text">undergrad who builds</span></div>
+                        <div class="reveal-wrap"><span class="reveal-text"><em>things that matter.</em></span></div>
+                    </h2>
                 </div>
-                <div class="about-text">
-                    <p>I'm a Computer Science undergraduate at <strong>A.P. Shah Institute of Technology</strong>, passionate about building innovative solutions that make a difference.</p>
-                    <p>As the <strong>Lead Organizer of GDG On Campus APSIT</strong>, I organize tech events,Hackathons, study jams, and workshops, helping students grow their technical skills and connect with the developer community.</p>
-                    <p>I'm currently contributing to <strong>GSoC 2026</strong> and exploring opportunities in AI/ML integration and cloud computing.</p>
+                <div class="about-right">
+                    <div class="about-bio reveal-text">
+                        <p>Currently studying at <strong>A.P. Shah Institute of Technology</strong>, I serve as the <strong>Lead Organizer of GDG On Campus APSIT</strong> — organizing hackathons, tech events, study jams and workshops that help students grow.</p>
+                        <p>I'm a <strong>GSSoC 2025</strong> contributor, a cloud explorer, and someone who believes in learning by building. My work sits at the crossroads of AI, cloud computing, and thoughtful design.</p>
+                        <p>When I'm not coding, you'll find me organizing community events, contributing to open source, or diving deep into the latest AI research.</p>
+                    </div>
                     
-                    <div class="skills-section">
-                        <h3>Technologies I work with:</h3>
-                        <div class="skills-grid">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">Java</span>
-                            <span class="skill-tag">C++</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">TypeScript</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">HTML/CSS</span>
-                            <span class="skill-tag">Kotlin</span>
-                            <span class="skill-tag">Google Cloud</span>
-                            <span class="skill-tag">Firebase</span>
-                            <span class="skill-tag">ARCore</span>
-                            <span class="skill-tag">Gemini AI</span>
-                            <span class="skill-tag">Git</span>
+                    <div class="about-stats reveal-text">
+                        <div class="stat">
+                            <span class="stat-number" data-count="10">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Events Organized</span>
                         </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="500">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Community Members</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image-section reveal-text">
+                <div class="about-image-wrapper">
+                    <img src="assets/Monochrome Simple Memories Photo Collage.png" alt="Avanish Kasar" class="about-img" loading="lazy">
+                    <div class="about-image-caption">
+                        <span>AVANISH KASAR</span>
+                        <span>MUMBAI, IN — 19.0760° N</span>
                     </div>
                 </div>
             </div>
@@ -157,73 +235,59 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Lead Organizer</h3>
-                                <p class="company">Google Developer Groups On Campus APSIT</p>
-                            </div>
-                            <span class="timeline-date">Aug 2025 - Present</span>
+            <div class="section-label reveal-text">
+                <span class="section-number">02</span>
+                <span class="section-label-text">EXPERIENCE</span>
+            </div>
+
+            <div class="experience-list">
+                <div class="experience-item reveal-text">
+                    <div class="exp-header">
+                        <div class="exp-role">
+                            <h3>Lead Organizer</h3>
+                            <span class="exp-company">Google Developer Groups On Campus APSIT</span>
                         </div>
-                        <p class="timeline-description">
-                            Organizing Hackathon,tech events, study jams, workshops, and educating students on behalf of Google Developer Groups. 
-                            Leading a community of developers and fostering technical growth.
-                        </p>
-                        <div class="timeline-tags">
-                            <span>Community</span>
-                            <span>Leadership</span>
-                            <span>Event Management</span>
-                        </div>
+                        <span class="exp-date">Aug 2025 — Present</span>
+                    </div>
+                    <p class="exp-desc">Organizing hackathons, tech events, study jams, workshops, and educating students on behalf of Google Developer Groups. Leading a developer community and fostering technical growth across campus.</p>
+                    <div class="exp-tags">
+                        <span>Community</span>
+                        <span>Leadership</span>
+                        <span>Event Management</span>
                     </div>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Business Development Intern</h3>
-                                <p class="company">Metvy</p>
-                            </div>
-                            <span class="timeline-date">May 2025 - Jun 2025 · 2 mos</span>
+
+                <div class="experience-item reveal-text">
+                    <div class="exp-header">
+                        <div class="exp-role">
+                            <h3>Business Development Intern</h3>
+                            <span class="exp-company">Metvy</span>
                         </div>
-                        <p class="timeline-description">
-                            Contributed to data-driven decision-making, supported product strategy through research and insights, and helped streamline community engagement initiatives. 
-                            Gained hands-on experience in bridging tech with peer learning, collaborating across teams, and leveraging data to guide execution.
-                        </p>
-                        <div class="timeline-tags">
-                            <span>Data Interpretation</span>
-                            <span>Python</span>
-                            <span>Product Strategy</span>
-                            <span>Community Engagement</span>
-                        </div>
+                        <span class="exp-date">May 2025 — Jun 2025</span>
+                    </div>
+                    <p class="exp-desc">Contributed to data-driven decision-making, supported product strategy through research and insights, and streamlined community engagement initiatives. Bridged tech with peer learning.</p>
+                    <div class="exp-tags">
+                        <span>Data Interpretation</span>
+                        <span>Python</span>
+                        <span>Product Strategy</span>
                     </div>
                 </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <h3>Open Source Contributor</h3>
-                                <p class="company">Google & GirlScript Summer of Code (GSSoC) </p>
-                            </div>
-                            <span class="timeline-date">2026</span>
+
+                <div class="experience-item reveal-text">
+                    <div class="exp-header">
+                        <div class="exp-role">
+                            <h3>Open Source Contributor</h3>
+                            <span class="exp-company">GirlScript Summer of Code (GSSoC) 2025</span>
                         </div>
-                        <p class="timeline-description">
-                            Contributing to open-source projects and collaborating with developers worldwide.
-                        </p>
-                        <div class="timeline-tags">
-                            <span>Open Source</span>
-                            <span>Collaboration</span>
-                        </div>
+                        <span class="exp-date">2025</span>
+                    </div>
+                    <p class="exp-desc">Contributing to open-source projects and collaborating with developers worldwide. Building in public and giving back to the community.</p>
+                    <div class="exp-tags">
+                        <span>Open Source</span>
+                        <span>Collaboration</span>
+                        <span>Git</span>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
@@ -231,75 +295,80 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- Project 1: Playlistify AI -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <span class="project-icon">🎵</span>
-                            <span class="project-name">Playlistify AI</span>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/avanishkasar/Playlistify-AI" target="_blank" rel="noopener" class="project-link-btn">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                    <span>View Code</span>
-                                </a>
-                                <a href="https://playlistifyyai.vercel.app" target="_blank" rel="noopener" class="project-link-btn">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
-                                    <span>Live Demo</span>
-                                </a>
-                            </div>
-                        </div>
+            <div class="section-label reveal-text">
+                <span class="section-number">03</span>
+                <span class="section-label-text">FEATURED WORK</span>
+            </div>
+
+            <div class="projects-list">
+                <!-- Project 1 -->
+                <div class="project-item reveal-text">
+                    <div class="project-visual">
+                        <div class="project-number">01</div>
+                        <div class="project-icon-large">🎵</div>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Playlistify AI</h3>
-                        <p class="project-description">
-                            An AI-powered Spotify playlist generator that transforms natural language descriptions into personalized playlists. 
-                            Features emotional understanding, multi-language support (English, Hindi, Tamil, Telugu), and agentic memory that learns your taste over time.
-                        </p>
-                        <div class="project-tech">
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-year">2025</span>
+                            <span class="project-category">AI / FULLSTACK</span>
+                        </div>
+                        <h3 class="project-name">Playlistify AI</h3>
+                        <p class="project-description">An AI-powered Spotify playlist generator that transforms natural language descriptions into personalized playlists. Features emotional understanding, multi-language support (English, Hindi, Tamil, Telugu), and agentic memory that learns your taste over time.</p>
+                        <div class="project-tech-stack">
                             <span>TypeScript</span>
                             <span>Node.js</span>
                             <span>Gemini AI</span>
                             <span>Spotify API</span>
                             <span>SQLite</span>
                         </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/avanishkasar/Playlistify-AI" target="_blank" rel="noopener" class="project-link" data-magnetic>
+                                <span>View Code</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                            </a>
+                            <a href="https://playlistifyyai.vercel.app" target="_blank" rel="noopener" class="project-link" data-magnetic>
+                                <span>Live Demo</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 2: Vision Protect -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <span class="project-icon">👁️</span>
-                            <span class="project-name">Vision Protect</span>
-                        </div>
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="https://github.com/avanishkasar/Vision-Protect-App" target="_blank" rel="noopener" class="project-link-btn">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                    <span>View Code</span>
-                                </a>
-                            </div>
-                        </div>
+                <!-- Project 2 -->
+                <div class="project-item reveal-text">
+                    <div class="project-visual">
+                        <div class="project-number">02</div>
+                        <div class="project-icon-large">👁️</div>
                     </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Vision Protect App</h3>
-                        <p class="project-description">
-                            An AI-powered AR app that transforms your phone into smart safety goggles. Using ARCore and ML, 
-                            it detects hazards in real-time and enhances visual awareness. Built for next-gen protection and immersive tech experiences.
-                        </p>
-                        <div class="project-tech">
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-year">2025</span>
+                            <span class="project-category">AR / MOBILE</span>
+                        </div>
+                        <h3 class="project-name">Vision Protect</h3>
+                        <p class="project-description">An AI-powered AR app that transforms your phone into smart safety goggles. Using ARCore and ML, it detects hazards in real-time and enhances visual awareness. Built for next-gen protection.</p>
+                        <div class="project-tech-stack">
                             <span>Kotlin</span>
                             <span>ARCore</span>
                             <span>ML Kit</span>
                             <span>Firebase</span>
                             <span>Android</span>
                         </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/avanishkasar/Vision-Protect-App" target="_blank" rel="noopener" class="project-link" data-magnetic>
+                                <span>View Code</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
+            </div>
+
+            <div class="projects-cta reveal-text">
+                <a href="https://github.com/avanishkasar" target="_blank" rel="noopener" class="all-work-link" data-magnetic>
+                    <span>See all work on GitHub</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
             </div>
         </div>
     </section>
@@ -307,40 +376,34 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="contact-content">
-                <h2 class="section-title">Let's Connect</h2>
-                <p class="contact-description">
-                    I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
-                </p>
-                
-                <div class="contact-methods">
-                    <a href="mailto:avanishkasar57@gmail.com" class="contact-method">
-                        <div class="method-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        </div>
-                        <div class="method-text">
-                            <h4>Email</h4>
-                            <p>avanishkasar57@gmail.com</p>
-                        </div>
-                    </a>
-                    
-                    <a href="https://linktr.ee/Avanish_Kasar" target="_blank" rel="noopener" class="contact-method">
-                        <div class="method-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
-                        </div>
-                        <div class="method-text">
-                            <h4>Links</h4>
-                            <p>linktr.ee/Avanish_Kasar</p>
-                        </div>
-                    </a>
+            <div class="contact-top">
+                <div class="section-label reveal-text">
+                    <span class="section-number">04</span>
+                    <span class="section-label-text">CONTACT</span>
                 </div>
-                
-                <div class="social-links-contact">
-                    <a href="https://github.com/avanishkasar" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
-                    <a href="https://www.linkedin.com/in/avanishkasar/" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
-                    <a href="https://x.com/only_avanish" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a>
-                    <a href="https://devfolio.co/@avanishkasar" target="_blank" rel="noopener" aria-label="Devfolio">Devfolio</a>
-                    <a href="https://www.skills.google/public_profiles/5a80efde-4a87-468b-9283-d91190580345" target="_blank" rel="noopener" aria-label="Google Cloud">Google Cloud</a>
+            </div>
+
+            <div class="contact-content">
+                <h2 class="contact-heading">
+                    <div class="reveal-wrap"><span class="reveal-text">Let's build</span></div>
+                    <div class="reveal-wrap"><span class="reveal-text">something <em>great</em></span></div>
+                    <div class="reveal-wrap"><span class="reveal-text">together.</span></div>
+                </h2>
+
+                <p class="contact-subtext reveal-text">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+
+                <a href="mailto:avanishkasar57@gmail.com" class="contact-email reveal-text" data-magnetic>
+                    <span>avanishkasar57@gmail.com</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+                </a>
+
+                <div class="contact-links reveal-text">
+                    <a href="https://github.com/avanishkasar" target="_blank" rel="noopener" data-magnetic>GitHub</a>
+                    <a href="https://www.linkedin.com/in/avanishkasar/" target="_blank" rel="noopener" data-magnetic>LinkedIn</a>
+                    <a href="https://x.com/only_avanish" target="_blank" rel="noopener" data-magnetic>Twitter / X</a>
+                    <a href="https://devfolio.co/@avanishkasar" target="_blank" rel="noopener" data-magnetic>Devfolio</a>
+                    <a href="https://linktr.ee/Avanish_Kasar" target="_blank" rel="noopener" data-magnetic>Linktree</a>
+                    <a href="https://www.skills.google/public_profiles/5a80efde-4a87-468b-9283-d91190580345" target="_blank" rel="noopener" data-magnetic>Google Cloud</a>
                 </div>
             </div>
         </div>
@@ -349,64 +412,21 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#home" class="footer-logo">
-                        <span>avanish</span><span class="logo-dot">.</span><span>tech</span>
-                    </a>
-                    <p class="footer-tagline">Building ideas into impact through code, creativity and persistence.</p>
+            <div class="footer-inner">
+                <div class="footer-left">
+                    <span class="footer-logo">AK</span>
+                    <span class="footer-tagline">Building ideas into impact.</span>
                 </div>
-                
-                <div class="footer-links">
-                    <div class="footer-nav">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#experience">Experience</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-social">
-                        <h4>Connect</h4>
-                        <div class="social-icons">
-                            <a href="https://github.com/avanishkasar" target="_blank" rel="noopener" aria-label="GitHub">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                            </a>
-                            <a href="https://www.linkedin.com/in/avanishkasar/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                            </a>
-                            <a href="https://x.com/only_avanish" target="_blank" rel="noopener" aria-label="Twitter">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                            </a>
-                            <a href="https://devfolio.co/@avanishkasar" target="_blank" rel="noopener" aria-label="Devfolio">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5zm0 18c-3.86-.93-6-4.46-6-8v-6.5l6-3 6 3V12c0 3.54-2.14 7.07-6 8z"/></svg>
-                            </a>
-                            <a href="https://www.skills.google/public_profiles/5a80efde-4a87-468b-9283-d91190580345" target="_blank" rel="noopener" aria-label="Google Cloud">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.6 0 12 0zm5.2 17.8l-1.4-1.4c-1 .8-2.3 1.4-3.8 1.4-3.3 0-6-2.7-6-6s2.7-6 6-6c1.5 0 2.8.5 3.8 1.4l1.4-1.4C15.8 4.6 14 4 12 4c-4.4 0-8 3.6-8 8s3.6 8 8 8c2 0 3.8-.6 5.2-1.8z"/></svg>
-                            </a>
-                        </div>
-                    </div>
+                <div class="footer-right">
+                    <span>&copy; 2026 Avanish Kasar</span>
+                    <span class="footer-separator">—</span>
+                    <span>Designed & built with passion</span>
                 </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Avanish Kasar. All rights reserved.</p>
-                <p class="footer-credit">Designed & Built with <span class="heart">♥</span> by Avanish</p>
             </div>
         </div>
     </footer>
 
-    <!-- Animated Wave Background -->
-    <a-waves class="background-animation">
-        <svg class="js-svg"></svg>
-    </a-waves>
-
     <!-- Scripts -->
-    <script src="js/noise.js"></script>
-    <script src="js/waves.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
