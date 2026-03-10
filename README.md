@@ -3,8 +3,6 @@
 <h3 align="center"> Cloud Eplorer @ Google Cloud Skills Boost | HTML, CSS, JS, Python| Vibe Coder | Always Building🚀</h3>
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=avanishkasar&label=Profile%20views&color=0e75b6&style=flat" alt="avanishkasar" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=avanishkasar&theme=radical" alt="avanishkasar" /></a> </p>
-
 - 🔭 I’m currently working on [ARchitect-Website](https://github.com/avanishkasar/ARchitect-Website)
 - 🌱 I’m currently learning **AI-ML Integration and Workflows**
 
@@ -53,10 +51,6 @@
 <h3 align="left">Support:</h3>
 <p><a href="https://www.buymeacoffee.com/avanishkasq"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="avanishkasq" /></a></p><br><br>
 
-<h3 align="left">Stars</h3>
-<img align="left" height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=avanishkasar&layout=compact&theme=radical" alt=avanishkasar />
-
-<p>&nbsp;<img align="center" height="180em" src="https://github-readme-stats.vercel.app/api?username=avanishkasar&show_icons=true&locale=en&theme=radical" alt="avanishkasar" /></p>
 
 <p><img align="center" height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=avanishkasar&theme=radical" alt="avanishkasar" /></p>
 
