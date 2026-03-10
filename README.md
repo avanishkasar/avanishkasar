@@ -48,11 +48,11 @@
   <img src="https://avatars.githubusercontent.com/u/4430336?s=200&v=4" alt="Oracle" width="40" height="40" alt="Oracle" width="40" height="40"/>
 </p>
 
-<h3 align="left">Support:</h3>
-<p><a href="https://www.buymeacoffee.com/avanishkasq"> <img align="left" src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="avanishkasq" /></a></p><br><br>
 
 
-<p><img align="center" height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=avanishkasar&theme=radical" alt="avanishkasar" /></p>
+<p align="center">
+  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=avanishkasar&theme=radical" alt="avanishkasar" />
+</p>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><h3 align="center">Statistics</h3>
 <div align="center">
@@ -63,5 +63,5 @@
 <img align="center" src="http://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=avanishkasar&theme=2077" height="180em" />
 <img align="center" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=avanishkasar&theme=2077" height="180em" />
 </div>
-
+<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"><h3 align="center">
 <img src="https://raw.githubusercontent.com/Trilokia/Trilokia/379277808c61ef204768a61bbc5d25bc7798ccf1/bottom_header.svg" />
