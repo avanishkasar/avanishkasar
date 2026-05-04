@@ -70,10 +70,13 @@ Google Cloud Certified ML Engineer · Google Student Ambassador 2026 · GDG On C
 ### Github Stats
 
 <p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=avanishkasar&show_icons=true&theme=tokyonight&hide_border=true" alt="Avanish's GitHub stats" />
-  <img width="48%" src="https://github-readme-streak-stats.herokuapp.com/?user=avanishkasar&theme=tokyonight&hide_border=true" alt="Avanish's streak stats" />
+  <img height="180em" src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=avanishkasar&theme=2077" />
+  <img height="180em" src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=avanishkasar&theme=2077" />
+  <img height="180em" src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=avanishkasar&theme=2077" />
 </p>
-
+<p align="center">
+  <img height="180em" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=avanishkasar&theme=2077" />
+</p>
 ---
 
 Currently based in Mumbai · Building AI systems that matter · Open to AI/ML internships and research collaborations
