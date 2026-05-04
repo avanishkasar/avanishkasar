@@ -1,4 +1,6 @@
-<img src="https://raw.githubusercontent.com/BEPb/BEPb/5c63fa170d1cbbb0b1974f05a3dbe6aca3f5b7f3/assets/Bottom_up.svg" width="100%" />
+<div align="center">
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0f3460,50:16213e,100:1a1a2e&height=200&section=header&text=Avanish%20Kasar&fontSize=60&fontColor=ffffff&fontAlignY=38&desc=AI%2FML%20Builder%20%E2%80%A2%20GDG%20Organizer%20%E2%80%A2%20Google%20Cloud%20ML%20Engineer&descAlignY=58&descSize=16&animation=fadeIn" />
+</div>
 
 <h1 align="center">Hi 👋, I'm Avanish!</h1>
 <h3 align="center">GDG Organizer @ APSIT · Google Cloud ML Engineer Certified · AI/ML Builder · Google Student Ambassador 2026</h3>
@@ -77,8 +79,11 @@ Google Cloud Certified ML Engineer · Google Student Ambassador 2026 · GDG On C
 <p align="center">
   <img height="180em" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=avanishkasar&theme=2077" />
 </p>
----
+
 
 Currently based in Mumbai · Building AI systems that matter · Open to AI/ML internships and research collaborations
 
 [📫 Connect with me](https://linktr.ee/Avanish_Kasar) · [LinkedIn](https://www.linkedin.com/in/avanishkasar) · [Portfolio](https://avanish.tech) · [Email](mailto:avanishkasar57@gmail.com)
+<div align="center">
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=120&section=footer" />
+</div>
