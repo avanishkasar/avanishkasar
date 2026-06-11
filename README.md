@@ -11,7 +11,7 @@
 
 ---
 
-### Hi, I'm Avanish 👋
+### Hi, I'm Avanish 
 
 I'm a CS undergrad and AI/ML builder focused on shipping real-world intelligent systems — from LLM-powered applications and RAG pipelines to agentic workflows and applied ML research. I don't just learn technology, I build with it and help others do the same.
 
@@ -19,7 +19,7 @@ Google Cloud Certified ML Engineer · Google Student Ambassador 2026 · GDG On C
 
 ---
 
-## 🔭 Current Focus
+##  Current Focus
 
 - Building applied ML research around **LLMs, RAG architectures, and AI agents**
 - Working on **demand forecasting systems** combining time-series models (ARIMA, XGBoost) with Google Trends signals
@@ -36,7 +36,7 @@ Google Cloud Certified ML Engineer · Google Student Ambassador 2026 · GDG On C
 
 ---
 
-## 🏆 Key Projects
+## Key Projects
 
 - [**ML Research & Demand Forecasting**](https://github.com/avanishkasar/ML-Research) — Applied ML research project combining ARIMA + XGBoost with Google Trends signals for e-commerce demand prediction. Evaluated using RMSE and MAPE metrics
 - [**Playlistify AI**](https://github.com/avanishkasar) — NLP-based music recommendation engine that converts natural language prompts into curated Spotify playlists using Gemini API and intent extraction
@@ -46,7 +46,7 @@ Google Cloud Certified ML Engineer · Google Student Ambassador 2026 · GDG On C
 
 ---
 
-## Skills and Experience 💪
+## Skills and Experience 
 
 - **Languages:** Python, C++, Java, JavaScript, TypeScript, Kotlin, Dart, HTML/CSS
 - **AI / ML:** Machine Learning, Deep Learning, NLP, Computer Vision, Generative AI, LLMs, RAG, AI Agents, Prompt Engineering, Tool Calling, Recommendation Systems
@@ -58,7 +58,7 @@ Google Cloud Certified ML Engineer · Google Student Ambassador 2026 · GDG On C
 
 ---
 
-## 🏅 Achievements
+## Achievements
 
 - 🥇 **Build and Grow AI Hackathon 2.0** — Top 15 Finalist (1,766+ teams nationwide), Grand Finale @ Jio Institute
 - 🥇 **Hack This Fall Community Fall 2025** — Top 10 Overall + Apify Track Reward, Hacker House @ Zoho House, Bengaluru
