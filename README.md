@@ -74,7 +74,6 @@ Google Cloud Certified ML Engineer · Google Student Ambassador 2026 · GDG On C
 <p align="center">
   <img height="180em" src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=avanishkasar&theme=2077" />
   <img height="180em" src="http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=avanishkasar&theme=2077" />
-  <img height="180em" src="http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=avanishkasar&theme=2077" />
 </p>
 <p align="center">
   <img height="180em" src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=avanishkasar&theme=2077" />
