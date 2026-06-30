@@ -1,6 +1,7 @@
 // ===================================
 // AVANISH KASAR — Portfolio JS
 // Premium interactions & animations
+// Updated: 2026
 // ===================================
 
 (function () {
@@ -174,13 +175,13 @@
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     // Stagger children within same parent
-                    const parent = entry.target.closest('.about-stats, .contact-links, .hero-socials, .exp-tags, .project-tech-stack');
+                    const parent = entry.target.closest('.about-stats, .contact-links, .hero-socials, .hero-actions, .exp-tags, .project-tech-stack');
                     if (parent) {
                         const siblings = parent.querySelectorAll('.reveal-text');
                         siblings.forEach((sibling, i) => {
                             setTimeout(() => {
                                 sibling.classList.add('visible');
-                            }, i * 100);
+                            }, i * 80);
                         });
                     } else {
                         entry.target.classList.add('visible');
@@ -189,18 +190,11 @@
                 }
             });
         }, {
-            threshold: 0.15,
-            rootMargin: '0px 0px -60px 0px'
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
         });
 
-        reveals.forEach((el, index) => {
-            // Add stagger delay based on position in parent
-            const parent = el.closest('section');
-            if (parent) {
-                const siblings = parent.querySelectorAll('.reveal-text');
-                const idx = Array.from(siblings).indexOf(el);
-                el.style.transitionDelay = `${idx * 0.05}s`;
-            }
+        reveals.forEach((el) => {
             observer.observe(el);
         });
     }
@@ -315,6 +309,41 @@
     });
 
     // ===================================
+    // Hero Sparkle / Particle on Mousemove
+    // ===================================
+    const heroSection = document.getElementById('home');
+    if (heroSection && window.innerWidth > 768) {
+        heroSection.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.85) {
+                const sparkle = document.createElement('div');
+                sparkle.style.cssText = `
+                    position: fixed;
+                    left: ${e.clientX}px;
+                    top: ${e.clientY}px;
+                    width: 4px;
+                    height: 4px;
+                    border-radius: 50%;
+                    background: var(--accent);
+                    pointer-events: none;
+                    z-index: 9998;
+                    transform: translate(-50%, -50%);
+                    opacity: 0.8;
+                    box-shadow: 0 0 6px var(--accent);
+                    transition: all 0.8s ease-out;
+                `;
+                document.body.appendChild(sparkle);
+                requestAnimationFrame(() => {
+                    sparkle.style.transform = `translate(${(Math.random()-0.5)*60}px, ${(Math.random()-0.5)*60 - 30}px)`;
+                    sparkle.style.opacity = '0';
+                    sparkle.style.width = '2px';
+                    sparkle.style.height = '2px';
+                });
+                setTimeout(() => sparkle.remove(), 800);
+            }
+        });
+    }
+
+    // ===================================
     // Console Art
     // ===================================
     console.log(`
@@ -327,11 +356,13 @@
 ╚═╝  ╚═╝╚═╝  ╚═╝
 
 %cAvanish Kasar — Software Developer & AI Engineer
-%cavanishkasar57@gmail.com
+%cavanishkasar57@gmail.com | avanish.tech
+%c🚀 Currently: Building OrbitGrasp, SmartRouter & leading GDG On Campus APSIT
 
 `, 'color: #00f0ff; font-weight: bold; font-size: 14px;', 
    'color: #e8e8e8; font-size: 12px; font-weight: bold;',
-   'color: #888; font-size: 11px;');
+   'color: #888; font-size: 11px;',
+   'color: #7B61FF; font-size: 11px;');
 
     // ===================================
     // Performance: Reduce animations
