@@ -1304,6 +1304,204 @@ a {
 }
 
 /* ===================================
+   Project Card Grid
+   =================================== */
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.proj-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.proj-card:hover,
+.proj-card--active {
+    border-color: rgba(0, 240, 255, 0.3);
+    box-shadow: 0 0 40px rgba(0, 240, 255, 0.06);
+}
+
+.proj-card__img-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #111;
+}
+
+.proj-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s var(--ease-out-expo), filter 0.4s ease;
+    filter: brightness(0.85) saturate(0.9);
+}
+
+.proj-card:hover .proj-card__img,
+.proj-card--active .proj-card__img {
+    transform: scale(1.04);
+    filter: brightness(0.7) saturate(1.1);
+}
+
+.proj-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(12,12,12,0.6) 0%, transparent 60%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.proj-card:hover .proj-card__overlay {
+    opacity: 1;
+}
+
+.proj-card__tap-hint {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.3rem 0.7rem;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    backdrop-filter: blur(6px);
+}
+
+.proj-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 1.4rem;
+    border-top: 1px solid var(--border);
+    gap: 1rem;
+}
+
+.proj-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.proj-card__num {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+    opacity: 0.6;
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+}
+
+.proj-card__title {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 0.15rem;
+    line-height: 1.2;
+}
+
+.proj-card__cat {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.proj-card__year {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+}
+
+/* Expanded panel */
+.proj-card__details {
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    padding: 1.4rem;
+    background: rgba(255,255,255,0.015);
+}
+
+.proj-card__desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 1.1rem;
+}
+
+.proj-card__tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.proj-card__tag {
+    padding: 0.25rem 0.65rem;
+    background: rgba(0, 240, 255, 0.05);
+    border: 1px solid rgba(0, 240, 255, 0.15);
+    border-radius: 6px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+}
+
+.proj-card__links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.proj-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: var(--text);
+    padding: 0.55rem 1.2rem;
+    border: 1px solid var(--border-hover);
+    border-radius: 100px;
+    transition: all 0.3s var(--ease-out-expo);
+}
+
+.proj-card__link:hover {
+    background: var(--accent);
+    color: var(--bg);
+    border-color: var(--accent);
+}
+
+.proj-card__link svg {
+    transition: transform 0.3s var(--ease-out-expo);
+}
+
+.proj-card__link:hover svg {
+    transform: translate(2px, -2px);
+}
+
+@media (max-width: 768px) {
+    .proj-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===================================
    Contact Section
    =================================== */
 .contact {
