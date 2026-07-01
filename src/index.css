@@ -1,5 +1,9 @@
+/* Skip @tailwind base to avoid conflicting with our custom CSS reset */
+@tailwind components;
+@tailwind utilities;
+
 /* ===================================
-   AVANISH KASAR — Portfolio
+   AVANISH KASAR â€” Portfolio
    Inspired by: wildyriftian.com, pixelwrld.co,
    jackiehu.design, codingleo.com
    =================================== */
@@ -1479,6 +1483,4 @@ a {
     background: var(--text-secondary);
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
