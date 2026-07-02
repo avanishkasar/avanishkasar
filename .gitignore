@@ -2,3 +2,8 @@ node_modules
 dist
 .env
 .DS_Store
+index-backup.html
+index-new.html
+index-old.html
+index_recovered.html
+index_utf8.html
