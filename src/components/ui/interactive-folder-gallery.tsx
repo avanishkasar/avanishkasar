@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -41,8 +40,9 @@ export function InteractiveFolderGallery({
             className="absolute bottom-6 w-80 h-56 drop-shadow-2xl"
             animate={{ opacity: isFolderOpen ? 0 : 1, scale: isFolderOpen ? 0.9 : 1 }}
           >
-            <div className="absolute top-0 left-0 w-32 h-10 bg-linear-to-t from-[#1e1e1e] to-[#2a2a2a] rounded-t-xl border-t border-l border-r border-white/10" />
-            <div className="absolute top-8 left-0 right-0 bottom-0 bg-linear-to-b from-[#1e1e1e] to-[#0a0a0a] rounded-b-xl rounded-tr-xl border border-white/10 shadow-[inset_0_0_40px_rgba(0,0,0,0.8)]" />
+            {/* Tailwind v3: bg-gradient-to-t (not bg-linear-to-t) */}
+            <div className="absolute top-0 left-0 w-32 h-10 bg-gradient-to-t from-[#1e1e1e] to-[#2a2a2a] rounded-t-xl border-t border-l border-r border-white/10" />
+            <div className="absolute top-8 left-0 right-0 bottom-0 bg-gradient-to-b from-[#1e1e1e] to-[#0a0a0a] rounded-b-xl rounded-tr-xl border border-white/10 shadow-[inset_0_0_40px_rgba(0,0,0,0.8)]" />
             <div className="absolute top-10 left-2 right-2 bottom-2 bg-black rounded-lg shadow-inner pointer-events-none" />
           </motion.div>
 
@@ -65,7 +65,7 @@ export function InteractiveFolderGallery({
                   key={photo.id}
                   drag={isFolderOpen ? true : false}
                   dragSnapToOrigin={true}
-                  onDragEnd={(e, info) => {
+                  onDragEnd={(_e, info) => {
                     if (info.offset.y > 100 && isFolderOpen) {
                       setIsFolderOpen(false);
                       setHoverFolder(false);
@@ -96,8 +96,11 @@ export function InteractiveFolderGallery({
           </div>
 
           <motion.div 
-            className="absolute bottom-0 w-[340px] h-44 drop-shadow-[0_-20px_40px_rgba(0,0,0,0.8)] cursor-pointer z-20 pointer-events-auto"
-            style={{ transformOrigin: "bottom" }}
+            className="absolute bottom-0 w-[340px] h-44 cursor-pointer z-20 pointer-events-auto"
+            style={{ 
+              transformOrigin: "bottom",
+              filter: "drop-shadow(0 -20px 40px rgba(0,0,0,0.8))"
+            }}
             animate={{ 
               opacity: isFolderOpen ? 0 : 1, 
               rotateX: hoverFolder ? -25 : 0, 
@@ -108,9 +111,8 @@ export function InteractiveFolderGallery({
             onMouseLeave={() => setHoverFolder(false)}
             onClick={() => setIsFolderOpen(true)}
           >
-            <div className="w-full h-full bg-linear-to-b from-[#2a2a2a] to-[#111] rounded-2xl border border-white/20 shadow-[inset_0_2px_10px_rgba(255,255,255,0.1)] relative overflow-hidden flex items-end justify-center pb-8">
-              <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/40 to-transparent" />
-
+            <div className="w-full h-full bg-gradient-to-b from-[#2a2a2a] to-[#111] rounded-2xl border border-white/20 shadow-[inset_0_2px_10px_rgba(255,255,255,0.1)] relative overflow-hidden flex items-end justify-center pb-8">
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
               <div className="px-5 py-2.5 bg-black rounded-lg border border-black/80 shadow-inner flex items-center justify-center backdrop-blur-md">
                 <span className="text-white/90 text-sm font-medium tracking-wide">
                   {folderName}
@@ -122,7 +124,7 @@ export function InteractiveFolderGallery({
 
         <motion.div 
           animate={{ opacity: isFolderOpen ? 1 : 0, y: isFolderOpen ? 0 : 50 }}
-          className="absolute bottom-10 px-6 py-3 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-md text-black/50 dark:text-white/50 text-sm font-medium uppercase tracking-widest pointer-events-none"
+          className="absolute bottom-10 px-6 py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-white/50 text-sm font-medium uppercase tracking-widest pointer-events-none"
         >
           {dragHintText}
         </motion.div>
