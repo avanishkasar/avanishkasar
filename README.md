@@ -1,6 +1,6 @@
 <div align="center">
 
-<h3><code>avanish@github ~ $ whoami</code></h3>
+<h3><code>avanish@github ~ whoami</code></h3>
 
 <table>
   <tr>
@@ -11,14 +11,14 @@
 
 <br>
 
-<h3><code>avanish@github ~ $ ./contributions.sh</code></h3>
+<h3><code>avanish@github ~ ./contributions.sh</code></h3>
 <img src="./contrib-heatmap.svg" width="860" />
 
 <br><br>
 
-<h3><code>avanish@github ~ $ ./links.sh</code></h3>
+<h3><code>avanish@github ~ ./links.sh</code></h3>
 
-AI/ML Builder &middot; GDG On Campus Lead @ APSIT &middot; Google Student Ambassador 2026
+AI/ML Builder &middot; GDG On Campus Lead @ APSIT &middot; Google Student Ambassador'26
 
 [Portfolio](https://avanish.tech) &nbsp;&middot;&nbsp; [LinkedIn](https://www.linkedin.com/in/avanishkasar) &nbsp;&middot;&nbsp; [Linktree](https://linktr.ee/Avanish_Kasar) &nbsp;&middot;&nbsp; [Email](mailto:avanishkasar57@gmail.com)
 
