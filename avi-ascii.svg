@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 574 176" width="574" height="176">
+<style>text{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;font-size:20px;fill:#c9d1d9;white-space:pre;}</style>
+<clipPath id="clip0">
+  <rect x="20" y="15" width="0" height="21">
+    <animate attributeName="width" from="0" to="534" begin="0.0s" dur="0.55s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+  </rect>
+</clipPath>
+<g clip-path="url(#clip0)">
+  <text x="20" y="30">     __      __     _   _ _____  _____ _    _ </text>
+</g>
+<rect id="cursor0" x="20" y="15" width="7" height="17" fill="#c9d1d9" opacity="0">
+  <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.01;0.9;1" begin="0.0s" dur="0.55s" fill="freeze" />
+  <animate attributeName="x" from="20" to="554" begin="0.0s" dur="0.55s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+</rect>
+<clipPath id="clip1">
+  <rect x="20" y="36" width="0" height="21">
+    <animate attributeName="width" from="0" to="534" begin="0.11s" dur="0.55s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+  </rect>
+</clipPath>
+<g clip-path="url(#clip1)">
+  <text x="20" y="51">    /\ \    / /\   | \ | |_   _|/ ____| |  | |</text>
+</g>
+<rect id="cursor1" x="20" y="36" width="7" height="17" fill="#c9d1d9" opacity="0">
+  <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.01;0.9;1" begin="0.11s" dur="0.55s" fill="freeze" />
+  <animate attributeName="x" from="20" to="554" begin="0.11s" dur="0.55s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+</rect>
+<clipPath id="clip2">
+  <rect x="20" y="57" width="0" height="21">
+    <animate attributeName="width" from="0" to="534" begin="0.22s" dur="0.55s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+  </rect>
+</clipPath>
+<g clip-path="url(#clip2)">
+  <text x="20" y="72">   /  \ \  / /  \  |  \| | | | | (___ | |__| |</text>
+</g>
+<rect id="cursor2" x="20" y="57" width="7" height="17" fill="#c9d1d9" opacity="0">
+  <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.01;0.9;1" begin="0.22s" dur="0.55s" fill="freeze" />
+  <animate attributeName="x" from="20" to="554" begin="0.22s" dur="0.55s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+</rect>
+<clipPath id="clip3">
+  <rect x="20" y="78" width="0" height="21">
+    <animate attributeName="width" from="0" to="534" begin="0.33s" dur="0.55s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+  </rect>
+</clipPath>
+<g clip-path="url(#clip3)">
+  <text x="20" y="93">  / /\ \ \/ / /\ \ | . ` | | |  \___ \|  __  |</text>
+</g>
+<rect id="cursor3" x="20" y="78" width="7" height="17" fill="#c9d1d9" opacity="0">
+  <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.01;0.9;1" begin="0.33s" dur="0.55s" fill="freeze" />
+  <animate attributeName="x" from="20" to="554" begin="0.33s" dur="0.55s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+</rect>
+<clipPath id="clip4">
+  <rect x="20" y="99" width="0" height="21">
+    <animate attributeName="width" from="0" to="534" begin="0.44s" dur="0.55s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+  </rect>
+</clipPath>
+<g clip-path="url(#clip4)">
+  <text x="20" y="114"> / ____ \  / ____ \| |\  |_| |_ ____) | |  | |</text>
+</g>
+<rect id="cursor4" x="20" y="99" width="7" height="17" fill="#c9d1d9" opacity="0">
+  <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.01;0.9;1" begin="0.44s" dur="0.55s" fill="freeze" />
+  <animate attributeName="x" from="20" to="554" begin="0.44s" dur="0.55s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+</rect>
+<clipPath id="clip5">
+  <rect x="20" y="120" width="0" height="21">
+    <animate attributeName="width" from="0" to="534" begin="0.55s" dur="0.55s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+  </rect>
+</clipPath>
+<g clip-path="url(#clip5)">
+  <text x="20" y="135">/_/    \_\/_/    \_\_| \_|_____|_____/|_|  |_|</text>
+</g>
+<rect id="cursor5" x="20" y="120" width="7" height="17" fill="#c9d1d9" opacity="0">
+  <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.01;0.9;1" begin="0.55s" dur="0.55s" fill="freeze" />
+  <animate attributeName="x" from="20" to="554" begin="0.55s" dur="0.55s" fill="freeze" calcMode="spline" keySplines="0.25 0.1 0.25 1" />
+</rect>
+</svg>

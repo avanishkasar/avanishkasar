@@ -1,0 +1,4 @@
+requests==2.32.3
+beautifulsoup4==4.12.3
+# wordmark-only (not needed by the daily workflow):
+pyfiglet==1.0.2
