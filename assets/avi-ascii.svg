@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="567" height="653" viewBox="0 0 567 653" style="background:#0a0a0a;">
+<style>
+  text { font-family: "Courier New", Courier, monospace; font-size: 11px; fill: #e8e8e8; white-space: pre; }
+</style>
+  <text x="10" y="24.1" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.000s" fill="freeze"/></text>
+  <text x="10" y="38.2" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.040s" fill="freeze"/></text>
+  <text x="10" y="52.2" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@%%%%#%%%%##%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.080s" fill="freeze"/></text>
+  <text x="10" y="66.3" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%@@%%#%%%%%%%%%%%%#*#%#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.120s" fill="freeze"/></text>
+  <text x="10" y="80.4" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%%%@@@@%+#%%@@%@%%@@%*%%%%%%%%**#%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.160s" fill="freeze"/></text>
+  <text x="10" y="94.5" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%@@@%@%%####%%@@@@%##@%%@@@@%#%##%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.200s" fill="freeze"/></text>
+  <text x="10" y="108.6" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%@@@@@@@%%@@%%%%@@@@@%%@%%@@%@%#@*##%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.240s" fill="freeze"/></text>
+  <text x="10" y="122.6" opacity="0">%%%%%%%%%%%%%%%%%%%%%%#@@@%%%%@%@@@%%@@@%%@@@%@%#%%@@%%@%%%#*%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.280s" fill="freeze"/></text>
+  <text x="10" y="136.7" opacity="0">%%%%%%%%%%%%%%%%%%%%%###%@%@%%@%##*+*###%%%%%%%%%%###%%@@%%%##%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.320s" fill="freeze"/></text>
+  <text x="10" y="150.8" opacity="0">%%%%%%%%%%%%%%%%%%%%%*@#%%%#*##*+===-==*==*%%####*##=+=#%@%%%%#%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.360s" fill="freeze"/></text>
+  <text x="10" y="164.9" opacity="0">%%%%%%%%%%%%%%%%%%%%%#%%%%*=------------*--=+%+*+=#-#---##%@@%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.400s" fill="freeze"/></text>
+  <text x="10" y="179.0" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%@%*=--::::::--::--+--=##+#==+*--+=+@@@@%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.440s" fill="freeze"/></text>
+  <text x="10" y="193.0" opacity="0">%%%%%%%%%%%%%%%%%%%%%@%@%%#=--:::::::.::.:..::--=+*%==#+-#-%%@@%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.480s" fill="freeze"/></text>
+  <text x="10" y="207.1" opacity="0">%%%%%%%%%%%%%%%%%%%%%@%%%%+--::............................-=%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.520s" fill="freeze"/></text>
+  <text x="10" y="221.2" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%#=--:..----:.:..:..................:-@%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.560s" fill="freeze"/></text>
+  <text x="10" y="235.3" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%--=+*##=-------+*+==--:------===-=-:-#%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.600s" fill="freeze"/></text>
+  <text x="10" y="249.4" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%%%%+-----------::-#%%%%#---:::::---#%##%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.640s" fill="freeze"/></text>
+  <text x="10" y="263.4" opacity="0">%%%%%%%%%%%%%%%%%%-.-%@%++*%+#+-=*#=-=-----+%%%%--------------%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.680s" fill="freeze"/></text>
+  <text x="10" y="277.5" opacity="0">%%%%%%%%%%%%%%%%%+##==#---=#%%%%@%@%%#%%-+-#=:-@#*###---------%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.720s" fill="freeze"/></text>
+  <text x="10" y="291.6" opacity="0">%%%%%%%%%%%%%%%%%++=:-#--:--%%%%%@@@@%%%%%%+...=@%%%%%##=---=#=-*%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.760s" fill="freeze"/></text>
+  <text x="10" y="305.7" opacity="0">%%%%%%%%%%%%%%%%%%--=+*-:.::+#%%%%%@@@@%%%+:....#%@@@%%#%+++*%*+#%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.800s" fill="freeze"/></text>
+  <text x="10" y="319.8" opacity="0">%%%%%%%%%%%%%%%%%%=:--=---:::=#%%%%%%%%%#+-.....-+%%%%%%%#*+%--=%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.840s" fill="freeze"/></text>
+  <text x="10" y="333.8" opacity="0">%%%%%%%%%%%%%%%%%%+-::===------=++++++++=--:.....-+++*##*=:..-.*%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.880s" fill="freeze"/></text>
+  <text x="10" y="347.9" opacity="0">%%%%%%%%%%%%%%%%%%*.:--====---------======#+===-=-===----:::-::%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.920s" fill="freeze"/></text>
+  <text x="10" y="362.0" opacity="0">%%%%%%%%%%%%%%%%%%#:..:====-------------=#+*##+=*----:::::---.:%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="0.960s" fill="freeze"/></text>
+  <text x="10" y="376.1" opacity="0">%%%%%%%%%%%%%%%%%%%%#*#+====------::::::--=====--...:::::---:.:%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.000s" fill="freeze"/></text>
+  <text x="10" y="390.2" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%+====------:----=--:--:::--..::::--=%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.040s" fill="freeze"/></text>
+  <text x="10" y="404.2" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%*+====------=++=+*+++++++-==--:----#%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.080s" fill="freeze"/></text>
+  <text x="10" y="418.3" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%#++====----=++===-----::-++*=-:---=%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.120s" fill="freeze"/></text>
+  <text x="10" y="432.4" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%=#*+========--=========----==---+%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.160s" fill="freeze"/></text>
+  <text x="10" y="446.5" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%-+##*++++====-===++*++==---====+%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.200s" fill="freeze"/></text>
+  <text x="10" y="460.6" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%-=+*##*+===---::.::::..:----===*%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.240s" fill="freeze"/></text>
+  <text x="10" y="474.6" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%--=++#%##+=----------::..:-=+=-#%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.280s" fill="freeze"/></text>
+  <text x="10" y="488.7" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%#----==+##%%#*++=====+====-=++---%%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.320s" fill="freeze"/></text>
+  <text x="10" y="502.8" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%------==+*##%%%%%%#########*=--:-@%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.360s" fill="freeze"/></text>
+  <text x="10" y="516.9" opacity="0">%%%%%%%%%%%%%%%#%%%%%%%-------==++**#%%%%%%%%%#*++==--::.#%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.400s" fill="freeze"/></text>
+  <text x="10" y="531.0" opacity="0">%%%%%%%%%%%#%%%%%%%%%%%%-------===++*#######*++===---:::.-%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.440s" fill="freeze"/></text>
+  <text x="10" y="545.0" opacity="0">%%%%%%%#%%%%%%%%%%%%%%%%#-------====++*****+++===---::--.-%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.480s" fill="freeze"/></text>
+  <text x="10" y="559.1" opacity="0">%%%#%%%%%%%%%%%%%%@%%%%%%#---------===+++++++==----::-:::=%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.520s" fill="freeze"/></text>
+  <text x="10" y="573.2" opacity="0">%%%%%%%%%%%%%%%%%%@%%%%%%@%---------==========---::----::%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.560s" fill="freeze"/></text>
+  <text x="10" y="587.3" opacity="0">%%%%%%%%%%%%%%%%%%%%%%%%%@@%*----=---=========--------:-#%%%%%%%%%%%@%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.600s" fill="freeze"/></text>
+  <text x="10" y="601.4" opacity="0">%%%%%%%%%%%%@%%%%%%%%%%%%%%%@%+---=---=======--------:=%%%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.640s" fill="freeze"/></text>
+  <text x="10" y="615.4" opacity="0">%%%%%%%%%%%@%%%%%%%%%%%%%%%%%%%%#--------===------::-#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.680s" fill="freeze"/></text>
+  <text x="10" y="629.5" opacity="0">%%%%%%%%%%@%%%%%%%%%%%%%%%%%%%%%%@%#=-::::-:-::.:-+%%%%%%%%%%%%%%%%%%%%%@%%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.720s" fill="freeze"/></text>
+  <text x="10" y="643.6" opacity="0">%%%%%%%%%%@%%%%%%%%%%%%%%%%%%%%%%%%@@@%%##***#%%@@@%@%%%%%%%%%%%%%%%%%%%%@%%%%%%%%%<animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.760s" fill="freeze"/></text>
+</svg>
