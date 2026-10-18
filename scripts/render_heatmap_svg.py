@@ -3,156 +3,192 @@
 Renders data/contributions.json as a 53-week x 7-day heatmap SVG that
 reveals itself with a diagonal, line-after-line slide-down (plays once
 on load, then freezes).
+
+Cells are coloured by GitHub's own per-day `data-level` (0-4) using
+GitHub's Primer contribution palette, so shades match the real profile
+graph 1:1. Light/dark palettes switch with prefers-color-scheme, which
+GitHub honours for SVGs embedded via <img>.
 """
+from __future__ import annotations
+
 import json
 import os
-from datetime import date, datetime, timedelta
+import sys
+from datetime import date, timedelta
+from typing import Any
 
 DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "contributions.json")
-OUT_PATH = "contrib-heatmap.svg"
+OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "contrib-heatmap.svg")
 
-PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
+# Primer `contribution-default-bgColor-{0..4}` tokens (github.com, 2024+).
+PALETTE_LIGHT = ["#eff2f5", "#aceebb", "#4ac26b", "#2da44e", "#116329"]
+PALETTE_DARK = ["#151b23", "#033a16", "#196c2e", "#2ea043", "#56d364"]
+TEXT_LIGHT = "#59636e"
+TEXT_DARK = "#9198a1"
+BORDER_LIGHT = "rgba(31,35,40,0.05)"
+BORDER_DARK = "rgba(240,246,252,0.05)"
 
 CELL = 11
 GAP = 3
-LEFT_PAD = 30
-TOP_PAD = 34
-BOTTOM_PAD = 40
-STAGGER = 0.012
+STEP = CELL + GAP
+LEFT_PAD = 34
+RIGHT_PAD = 10
+TOP_PAD = 24
+BOTTOM_PAD = 34
+STAGGER = 0.072  # seconds per diagonal step
 DUR = 0.35
 
+MONTH_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+WEEKDAY_LABELS = {1: "Mon", 3: "Wed", 5: "Fri"}  # row index, Sun = 0
 
-def load_data():
-    with open(DATA_PATH) as f:
+
+def load_data() -> dict[str, Any]:
+    with open(DATA_PATH, encoding="utf-8") as f:
         return json.load(f)
 
 
-def bucket_level(count, max_count):
-    if count <= 0:
-        return 0
-    if max_count <= 0:
-        return 1
-    ratio = count / max_count
-    if ratio > 0.75:
-        return 5
-    if ratio > 0.5:
-        return 4
-    if ratio > 0.25:
-        return 3
-    return 2
+def level_of(entry: dict[str, Any]) -> int:
+    lvl = entry.get("level")
+    if lvl is None:  # legacy JSON without levels
+        return 1 if entry.get("count", 0) > 0 else 0
+    return max(0, min(int(lvl), 4))
 
 
-def build_weeks(days):
-    by_date = {d["date"]: d for d in days}
+def build_weeks(days: list[dict[str, Any]]) -> list[list[dict[str, Any] | None]]:
+    """Sun-Sat columns; padding cells before the first day are None (not drawn)."""
     if not days:
         return []
-    all_dates = sorted(by_date.keys())
-    start = datetime.strptime(all_dates[0], "%Y-%m-%d").date()
-    end = datetime.strptime(all_dates[-1], "%Y-%m-%d").date()
+    by_date = {d["date"]: d for d in days}
+    start = date.fromisoformat(min(by_date))
+    end = date.fromisoformat(max(by_date))
 
-    # align start back to the preceding Sunday
-    start -= timedelta(days=(start.weekday() + 1) % 7)
-
-    weeks = []
-    cur_week = []
+    weeks: list[list[dict[str, Any] | None]] = []
+    week: list[dict[str, Any] | None] = [None] * ((start.weekday() + 1) % 7)
     cursor = start
     while cursor <= end:
-        key = cursor.strftime("%Y-%m-%d")
+        key = cursor.isoformat()
         entry = by_date.get(key, {"count": 0, "level": 0})
-        cur_week.append({"date": key, "count": entry.get("count", 0)})
-        if cursor.weekday() == 5:  # Saturday closes the week (Sun-Sat)
-            weeks.append(cur_week)
-            cur_week = []
+        week.append({"date": key, "count": int(entry.get("count", 0)), "level": level_of(entry)})
+        if len(week) == 7:
+            weeks.append(week)
+            week = []
         cursor += timedelta(days=1)
-    if cur_week:
-        weeks.append(cur_week)
+    if week:
+        weeks.append(week)
     return weeks
 
 
-MONTH_ABBR = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-
-
-def month_labels(weeks):
-    labels = []
-    last_month = None
+def month_labels(weeks: list[list[dict[str, Any] | None]]) -> list[tuple[int, str]]:
+    labels: list[tuple[int, str]] = []
+    last_month: int | None = None
     for wi, week in enumerate(weeks):
-        d = datetime.strptime(week[0]["date"], "%Y-%m-%d").date()
-        if d.month != last_month:
-            labels.append((wi, MONTH_ABBR[d.month - 1]))
-            last_month = d.month
-    return labels
+        first = next(d for d in week if d is not None)
+        m = date.fromisoformat(first["date"]).month
+        if m != last_month:
+            labels.append((wi, MONTH_ABBR[m - 1]))
+            last_month = m
+    # Like GitHub, drop a label that would collide with the next one.
+    return [
+        lab for i, lab in enumerate(labels)
+        if i + 1 >= len(labels) or labels[i + 1][0] - lab[0] >= 3
+    ]
 
 
-def build_svg(payload):
-    days = payload.get("days", [])
-    stats = payload.get("stats", {})
-    weeks = build_weeks(days)
-    max_count = max((d["count"] for w in weeks for d in w), default=0)
+def plural(n: int, word: str) -> str:
+    return f"{n:,} {word}{'' if n == 1 else 's'}"
 
-    n_weeks = len(weeks)
-    width = LEFT_PAD + n_weeks * (CELL + GAP) + 20
-    height = TOP_PAD + 7 * (CELL + GAP) + BOTTOM_PAD
 
-    parts = []
-    parts.append(
+def css() -> str:
+    def rules(pal: list[str], text: str, border: str) -> str:
+        cells = "".join(f".l{i}{{fill:{c};}}" for i, c in enumerate(pal))
+        return f"text{{fill:{text};}}rect.c{{stroke:{border};}}{cells}"
+
+    return (
+        "<style>"
+        'text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif;'
+        "font-size:10px;}"
+        "rect.c{stroke-width:1;}"
+        + rules(PALETTE_LIGHT, TEXT_LIGHT, BORDER_LIGHT)
+        + "@media (prefers-color-scheme:dark){"
+        + rules(PALETTE_DARK, TEXT_DARK, BORDER_DARK)
+        + "}</style>"
+    )
+
+
+def build_svg(payload: dict[str, Any]) -> str:
+    stats = payload.get("stats") or {}
+    weeks = build_weeks(payload.get("days") or [])
+    if not weeks:
+        raise ValueError("no contribution days in data file")
+
+    width = LEFT_PAD + len(weeks) * STEP - GAP + RIGHT_PAD
+    height = TOP_PAD + 7 * STEP - GAP + BOTTOM_PAD
+
+    parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" '
-        f'width="{width}" height="{height}">'
-    )
-    parts.append(
-        '<style>text{font-family:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;'
-        'fill:#8b949e;font-size:11px;}</style>'
-    )
-    parts.append(f'<rect x="0" y="0" width="{width}" height="{height}" fill="transparent" />')
+        f'width="{width}" height="{height}" role="img" aria-label="GitHub contribution graph">',
+        css(),
+    ]
 
-    for wi, mlabel in month_labels(weeks):
-        x = LEFT_PAD + wi * (CELL + GAP)
-        parts.append(f'<text x="{x}" y="{TOP_PAD - 10}">{mlabel}</text>')
+    for wi, label in month_labels(weeks):
+        parts.append(f'<text x="{LEFT_PAD + wi * STEP}" y="{TOP_PAD - 8}">{label}</text>')
+    for di, label in WEEKDAY_LABELS.items():
+        parts.append(f'<text x="0" y="{TOP_PAD + di * STEP + 9}">{label}</text>')
 
     for wi, week in enumerate(weeks):
         for di, day in enumerate(week):
-            level = bucket_level(day["count"], max_count)
-            color = PALETTE[level]
-            x = LEFT_PAD + wi * (CELL + GAP)
-            y = TOP_PAD + di * (CELL + GAP)
-            begin = round((wi + di * 0.3) * STAGGER * 6, 3)
+            if day is None:
+                continue
+            x = LEFT_PAD + wi * STEP
+            y = TOP_PAD + di * STEP
+            begin = round((wi + di * 0.3) * STAGGER, 3)
             parts.append(
-                f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2" ry="2" '
-                f'fill="{color}" opacity="0">'
+                f'<rect class="c l{day["level"]}" x="{x}" y="{y}" width="{CELL}" height="{CELL}" '
+                f'rx="2" ry="2" opacity="0">'
                 f'<animate attributeName="opacity" from="0" to="1" begin="{begin}s" '
                 f'dur="{DUR}s" fill="freeze" />'
                 f'<animateTransform attributeName="transform" type="translate" '
                 f'from="0 -6" to="0 0" begin="{begin}s" dur="{DUR}s" fill="freeze" '
                 f'calcMode="spline" keySplines="0.25 0.1 0.25 1" />'
-                f'<title>{day["date"]}: {day["count"]} contribution(s)</title>'
-                f'</rect>'
+                f'<title>{plural(day["count"], "contribution")} on {day["date"]}</title>'
+                f"</rect>"
             )
 
-    # legend
-    legend_y = height - 20
-    legend_x = LEFT_PAD
-    parts.append(f'<text x="{legend_x}" y="{legend_y + 9}">Less</text>')
-    lx = legend_x + 34
-    for c in PALETTE:
-        parts.append(f'<rect x="{lx}" y="{legend_y}" width="{CELL}" height="{CELL}" rx="2" fill="{c}" />')
-        lx += CELL + GAP
-    parts.append(f'<text x="{lx + 4}" y="{legend_y + 9}">More</text>')
-
+    # footer: summary (left), legend (right) -- same layout as github.com
+    fy = height - 12
     total = stats.get("total_contributions")
     if total is not None:
-        footer = f"{total} contributions in the last year"
-        parts.append(f'<text x="{width - 20}" y="{legend_y + 9}" text-anchor="end">{footer}</text>')
+        summary = f"{plural(int(total), 'contribution')} in the last year"
+        streak = stats.get("longest_streak")
+        if streak:
+            summary += f" · longest streak {plural(int(streak), 'day')}"
+        parts.append(f'<text x="{LEFT_PAD}" y="{fy + 9}">{summary}</text>')
 
-    parts.append('</svg>')
-    return "\n".join(parts)
+    lx = width - RIGHT_PAD - 5 * STEP - 28  # leaves room for "More"
+    parts.append(f'<text x="{lx - 6}" y="{fy + 9}" text-anchor="end">Less</text>')
+    for i in range(5):
+        parts.append(
+            f'<rect class="c l{i}" x="{lx + i * STEP}" y="{fy}" width="{CELL}" height="{CELL}" rx="2" ry="2" />'
+        )
+    parts.append(f'<text x="{lx + 5 * STEP + 3}" y="{fy + 9}">More</text>')
+
+    parts.append("</svg>")
+    return "\n".join(parts) + "\n"
 
 
-def main():
-    payload = load_data()
-    svg = build_svg(payload)
-    with open(OUT_PATH, "w") as f:
+def main() -> int:
+    try:
+        svg = build_svg(load_data())
+    except (OSError, ValueError, KeyError) as e:
+        print(f"render failed, keeping previous {OUT_PATH}: {e}", file=sys.stderr)
+        return 1
+    tmp = OUT_PATH + ".tmp"
+    with open(tmp, "w", encoding="utf-8") as f:
         f.write(svg)
+    os.replace(tmp, OUT_PATH)
     print(f"wrote {OUT_PATH}")
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

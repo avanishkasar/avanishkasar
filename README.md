@@ -12,11 +12,11 @@
 <br>
 
 <h3><code>contributions</code></h3>
-<img src="./contrib-heatmap.svg" width="860" />
+<img src="./contrib-heatmap.svg" width="783" alt="GitHub contribution graph" />
 
 <br><br>
 
-AI/ML Builder &middot; GDG On Campus Lead @ APSIT &middot; Google Student Ambassador'26
+Backend &amp; Applied AI Engineer &middot; GDG On Campus Lead @ APSIT &middot; Google Student Ambassador '26 (Gemini)
 
 [Portfolio](https://avanish.tech) &nbsp;&middot;&nbsp; [LinkedIn](https://www.linkedin.com/in/avanishkasar) &nbsp;&middot;&nbsp; [Linktree](https://linktr.ee/Avanish_Kasar) &nbsp;&middot;&nbsp; [Email](mailto:avanishkasar57@gmail.com)
 
@@ -27,5 +27,6 @@ Regenerate locally:
   python scripts/make_ascii_svg.py        # avi-ascii.svg   (static wordmark, run only when text changes)
   python scripts/make_info_card.py        # info-card.svg   (static, run only when details change)
   python scripts/fetch_contributions.py   # data/contributions.json (real data, no token)
-  python scripts/render_heatmap_svg.py    # contrib-heatmap.svg (run daily via GitHub Actions)
+  python scripts/render_heatmap_svg.py    # contrib-heatmap.svg (GitHub's own levels + Primer palette, light/dark)
+  Both run daily via .github/workflows/update-profile-art.yml -- keep that workflow enabled in the Actions tab.
 -->
