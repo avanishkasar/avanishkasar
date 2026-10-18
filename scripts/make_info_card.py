@@ -10,13 +10,19 @@ import os
 OUT_PATH = "info-card.svg"
 STATIC = os.environ.get("STATIC") == "1"
 
-TITLE = "avanish@apsit"
+TITLE = "avanish@github"
+# Keep values <= 40 chars: at FONT_SIZE 14 that's the room right of the key column.
 ROWS = [
-    ("Now", "GDG On Campus Lead @ APSIT · Google Student Ambassador '26"),
-    ("Prev", "OCI AI Foundations Associate · GSSoC '25 Contributor"),
-    ("Stack", "Python · LangChain/FAISS · PyTorch · GCP · Flutter"),
-    ("Focus", "LLM agents, RAG pipelines, applied ML research"),
-    ("Highlights", "Top 15 @ Build & Grow AI Hackathon 2.0 (1,766+ teams)"),
+    ("Role", "Backend & Applied AI Engineer"),
+    ("Edu", "B.E. CSE @ APSIT, Mumbai Univ. '28"),
+    ("Community", "GDG On Campus Lead @ APSIT '25-26"),
+    ("Google", "Student Ambassador '26 (Gemini)"),
+    ("Research", "Paper under review @ MethodsX (Elsevier)"),
+    ("Focus", "Autonomous agents · distributed systems"),
+    ("AI/ML", "PyTorch · LangGraph · pykan · XGBoost"),
+    ("Backend", "Python · FastAPI · Redis · TypeScript"),
+    ("Infra", "Docker · Kubernetes · Helm"),
+    ("Building", "KAN-KubeAgent · FluxGuard · DemandFlow"),
     ("Location", "Mumbai, India"),
 ]
 
@@ -27,8 +33,8 @@ BG = "#0d1117"
 BORDER = "#30363d"
 TITLE_COLOR = "#58a6ff"
 
-FONT_SIZE = 15
-ROW_H = 30
+FONT_SIZE = 14
+ROW_H = 28
 PAD_X = 22
 PAD_TOP = 54
 STAGGER = 0.14
@@ -40,6 +46,9 @@ def esc(s):
 
 
 def build_svg():
+    too_long = [k for k, v in ROWS if len(v) > 40]
+    if too_long:
+        raise SystemExit(f"values too long for the card: {too_long}")
     width = 490
     height = PAD_TOP + ROW_H * len(ROWS) + 26
 
