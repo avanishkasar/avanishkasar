@@ -7,3 +7,5 @@ index-new.html
 index-old.html
 index_recovered.html
 index_utf8.html
+__pycache__/
+*.pyc
